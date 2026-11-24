@@ -152,7 +152,7 @@ def main(argv: list[str]) -> int:
     page = (OUT / "index.html").read_text()
     # Version the stylesheet and script so browsers fetch new copies after each change
     import hashlib
-    for name in ("style.css", "app.js"):
+    for name in ("style.css", "app.js", "extras.js"):
         v = hashlib.sha256((OUT / name).read_bytes()).hexdigest()[:10]
         page = page.replace(f'href="{name}"', f'href="{name}?v={v}"').replace(f'src="{name}"', f'src="{name}?v={v}"')
     page = (page.replace("<!--LIST-->", "".join(blocks))
