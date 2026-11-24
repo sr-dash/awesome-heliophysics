@@ -19,9 +19,33 @@ jobs:
       - name: Check links
         uses: lycheeverse/lychee-action@v2
         with:
-          # Only links that are gone fail the check; blocked or slow sites (403, 429, timeouts) do not
           args: >-
             --no-progress --max-retries 2 --timeout 30
             --accept 200..=299,403,429
+            --format json --output lychee.json
             README.md contributing.md
-          fail: true
+          fail: false
+      # Only links that are gone fail the check (404, 410, unknown host). Sites that block
+      # automated checks or are slow from GitHub's runners are reported as warnings.
+      - name: Fail on links that are gone
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          r = json.load(open("lychee.json"))
+          gone, warn = [], []
+          for src, items in (r.get("error_map") or r.get("fail_map") or {}).items():
+              for it in items:
+                  st = it.get("status") or {}
+                  text = json.dumps(st)
+                  code = st.get("code") if isinstance(st, dict) else None
+                  low = text.lower()
+                  if code in (404, 410) or "404 not found" in low or "410 gone" in low or "dns error" in low or "failed to lookup address" in low:
+                      gone.append(f"{src}: {it.get('url')} ({text[:120]})")
+                  else:
+                      warn.append(f"{src}: {it.get('url')} ({text[:120]})")
+          for w in warn:
+              print(f"::warning::{w}")
+          for g in gone:
+              print(f"::error::{g}")
+          sys.exit(1 if gone else 0)
+          PY
