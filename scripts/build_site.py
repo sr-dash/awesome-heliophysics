@@ -40,6 +40,7 @@ SECTION_STYLE = {
     "Event catalogues and indices": ("#E0603F", "304 Å"),
     "Python software": ("#4FC1B4", "131 Å"),
     "IDL and other software": ("#8FD16A", "94 Å"),
+    "Data formats and standards": ("#E3A88A", "1074.7 nm"),
     "Viewers and visualisation": ("#C9925A", "193 Å"),
     "Models and simulation codes": ("#B07CE8", "211 Å"),
     "Space-weather services": ("#5E8DF0", "335 Å"),
