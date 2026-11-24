@@ -150,6 +150,11 @@ def main(argv: list[str]) -> int:
           "itemListElement": [{"@type": "ListItem", "position": n + 1, "name": e["name"], "url": e["url"],
                                "description": e["desc"]} for n, e in enumerate(entries)]}
     page = (OUT / "index.html").read_text()
+    # Version the stylesheet and script so browsers fetch new copies after each change
+    import hashlib
+    for name in ("style.css", "app.js"):
+        v = hashlib.sha256((OUT / name).read_bytes()).hexdigest()[:10]
+        page = page.replace(f'href="{name}"', f'href="{name}?v={v}"').replace(f'src="{name}"', f'src="{name}?v={v}"')
     page = (page.replace("<!--LIST-->", "".join(blocks))
                 .replace("<!--ITEMLIST-->", json.dumps(ld, ensure_ascii=False).replace("</", "<\\/"))
                 .replace("{{COUNT}}", str(len(entries)))
