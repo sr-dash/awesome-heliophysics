@@ -1,0 +1,60 @@
+name: Suggest a resource
+description: Suggest a data archive, tool, model, service or learning resource for the list.
+title: "Add: "
+labels: ["suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion. Fill in the four fields; no Markdown is needed. Once a maintainer accepts it,
+        a pull request adding the entry is opened automatically, in the right section and in alphabetical order.
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: The resource's own name, as plain text.
+      placeholder: SunPy
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: Its main page or repository.
+      placeholder: https://github.com/sunpy/sunpy
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Section
+      options:
+        - Data archives and portals
+        - Event catalogues and indices
+        - Python software
+        - IDL and other software
+        - Viewers and visualisation
+        - Models and simulation codes
+        - Space-weather services
+        - Missions and observatories
+        - Machine-learning datasets
+        - Learning
+        - Community
+    validations:
+      required: true
+  - type: input
+    id: description
+    attributes:
+      label: Description
+      description: One sentence on what it is and what it is for. Do not repeat the name, and avoid marketing words.
+      placeholder: The core Python package for solar physics, with maps, coordinates, time series and data search.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: The resource is public, and software has an open-source licence.
+          required: true
+        - label: I maintain or help maintain this resource.

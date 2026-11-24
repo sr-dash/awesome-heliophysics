@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8X5BSNF3VV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8X5BSNF3VV');
+  </script>
+  <title>Awesome Heliophysics: data, software and models for the Sun and space weather</title>
+  <meta name="description" content="A curated, searchable list of {{COUNT}} heliophysics resources: solar and space-physics data archives, Python and IDL software, models, viewers, space-weather services, missions and learning material.">
+  <meta name="keywords" content="heliophysics, solar physics, space weather, solar wind, SunPy, solar data, CDAWeb, JSOC, SDO, Solar Orbiter, Parker Solar Probe, DKIST, PFSS, MHD models, awesome list">
+  <meta name="author" content="Soumyaranjan Dash">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="google-site-verification" content="wNt-P7enH5ZTT0cjYYqXEN9GRrj-0_OcbZSER57FIK4">
+  <link rel="canonical" href="https://sr-dash.github.io/awesome-heliophysics/">
+  <meta name="theme-color" content="#0F1733" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F5F7FC" media="(prefers-color-scheme: light)">
+  <meta name="color-scheme" content="dark light">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Awesome Heliophysics">
+  <meta property="og:title" content="Awesome Heliophysics">
+  <meta property="og:description" content="{{COUNT}} curated data archives, software, models, viewers and services for the study of the Sun, the heliosphere and space weather.">
+  <meta property="og:url" content="https://sr-dash.github.io/awesome-heliophysics/">
+  <meta property="og:image" content="https://sr-dash.github.io/awesome-heliophysics/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Golden coronal loops rising above the solar limb, with the title Awesome Heliophysics.">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Awesome Heliophysics">
+  <meta name="twitter:description" content="{{COUNT}} curated resources for the Sun, the heliosphere and space weather.">
+  <meta name="twitter:image" content="https://sr-dash.github.io/awesome-heliophysics/assets/og-image.png">
+  <meta name="twitter:image:alt" content="Golden coronal loops rising above the solar limb, with the title Awesome Heliophysics.">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="alternate" type="application/json" title="The list as JSON" href="data/entries.json">
+  <link rel="alternate" type="text/plain" title="Guide for automated readers" href="llms.txt">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Apply a saved theme before the first paint
+    try { const t = localStorage.getItem('ah-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Awesome Heliophysics",
+    "url": "https://sr-dash.github.io/awesome-heliophysics/",
+    "description": "A curated list of data archives, software, models, viewers and learning resources for heliophysics.",
+    "inLanguage": "en",
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "author": {"@type": "Person", "name": "Soumyaranjan Dash", "url": "https://github.com/sr-dash"},
+    "dateModified": "{{UPDATED}}",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://sr-dash.github.io/awesome-heliophysics/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json"><!--ITEMLIST--></script>
+</head>
+<body>
+  <a class="skip" href="#list">Skip to the list</a>
+
+  <header class="top">
+    <a class="brand" href="./" aria-label="Awesome Heliophysics home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><use href="#mark"/></svg>
+      <span>Awesome Heliophysics</span>
+    </a>
+    <nav class="top-links" aria-label="Site">
+      <a href="https://github.com/sr-dash/awesome-heliophysics/issues/new?template=suggest-resource.yml" rel="noopener">Suggest a resource</a>
+      <a href="https://github.com/sr-dash/awesome-heliophysics" rel="noopener" class="gh" aria-label="The list on GitHub">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        <span>GitHub</span>
+      </a>
+      <button class="theme" type="button" aria-label="Switch between dark and light" title="Switch between dark and light">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></g></svg>
+      </button>
+    </nav>
+  </header>
+
+  <section class="hero" aria-labelledby="title">
+    <canvas class="corona" aria-hidden="true"></canvas>
+    <div class="hero-text">
+      <h1 id="title">Awesome Heliophysics</h1>
+      <p class="lede">Data archives, software, models and services for studying the Sun, the solar wind and space weather, chosen and described by people who use them.</p>
+      <p class="tally">{{COUNT}} resources in {{SECTIONS}} sections. Updated {{UPDATED_LONG}}.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#list">Browse the list</a>
+        <a class="btn" href="https://github.com/sr-dash/awesome-heliophysics/issues/new?template=suggest-resource.yml" rel="noopener">Suggest a resource</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="bar" role="search">
+    <div class="bar-inner">
+      <label class="search">
+        <span class="sr">Search the list</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="q" type="search" placeholder="Search names, descriptions, languages" autocomplete="off" spellcheck="false">
+        <kbd aria-hidden="true">/</kbd>
+      </label>
+      <div class="chips" id="chips" role="group" aria-label="Show sections"></div>
+      <div class="controls">
+        <label class="sort"><span class="sr">Sort</span>
+          <select id="sort">
+            <option value="az">A to Z</option>
+            <option value="stars">Most GitHub stars</option>
+            <option value="recent">Recently updated</option>
+          </select>
+        </label>
+        <button class="btn btn-small" id="random" type="button">Surprise me</button>
+      </div>
+    </div>
+    <p class="status" id="status" aria-live="polite"></p>
+  </div>
+
+  <main id="list" class="list" tabindex="-1">
+    <!--LIST-->
+    <div class="empty" id="empty" hidden>
+      <p>Nothing matches that search.</p>
+      <p><button class="btn btn-small" id="clear" type="button">Clear the search</button> or <a href="https://github.com/sr-dash/awesome-heliophysics/issues/new?template=suggest-resource.yml" rel="noopener">suggest the resource you were looking for</a>.</p>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <div>
+        <h2>Add to the list</h2>
+        <p>Suggest a resource with a <a href="https://github.com/sr-dash/awesome-heliophysics/issues/new?template=suggest-resource.yml" rel="noopener">short form</a>: a name, a link and one sentence. Once it is accepted, a pull request adds it in the right place. Or edit <a href="https://github.com/sr-dash/awesome-heliophysics/blob/main/README.md" rel="noopener">README.md</a> directly; see the <a href="https://github.com/sr-dash/awesome-heliophysics/blob/main/contributing.md" rel="noopener">contributing guide</a>.</p>
+      </div>
+      <div>
+        <h2>Listed here?</h2>
+        <p>Show it in your README:</p>
+        <div class="badge-copy">
+          <img src="https://img.shields.io/badge/listed%20in-Awesome%20Heliophysics-fc60a8?logo=awesomelists&amp;logoColor=white" alt="Listed in Awesome Heliophysics" width="208" height="20" loading="lazy">
+          <button class="btn btn-small" type="button" data-copy="[![Listed in Awesome Heliophysics](https://img.shields.io/badge/listed%20in-Awesome%20Heliophysics-fc60a8?logo=awesomelists&amp;logoColor=white)](https://github.com/sr-dash/awesome-heliophysics)">Copy badge Markdown</button>
+        </div>
+      </div>
+      <p class="fine">The list is in the public domain (<a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="noopener">CC0 1.0</a>). Section colours follow the false-colour scales of SDO's AIA channels. Also available as <a href="data/entries.json">JSON</a> and <a href="llms.txt">plain text</a>. Maintained by <a href="https://github.com/sr-dash" rel="noopener">Soumyaranjan Dash</a>. This page uses Google Analytics to count visits.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="mark" viewBox="0 0 32 32">
+      <circle cx="16" cy="22" r="9" fill="currentColor"/>
+      <path d="M8.5 17.5C8 9 24 9 23.5 17.5M11.5 15C11.5 9.5 20.5 9.5 20.5 15" fill="none" stroke="#E9B44C" stroke-width="2.2" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+name: links
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "23 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Only links that are gone fail the check; blocked or slow sites (403, 429, timeouts) do not
+          args: >-
+            --no-progress --max-retries 2 --timeout 30
+            --accept 200..=299,403,429
+            README.md contributing.md
+          fail: true

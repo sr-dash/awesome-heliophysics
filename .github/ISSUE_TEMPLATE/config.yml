@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Ask a question or start a discussion
+    url: https://github.com/sr-dash/awesome-heliophysics/discussions
+    about: Ideas for new sections, or resources you are unsure about.

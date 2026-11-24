@@ -1,0 +1,82 @@
+name: suggestion
+
+# A maintainer labels a "Suggest a resource" issue 'accepted'; this adds the entry to README.md and
+# opens a pull request for review. Only people with triage access can add labels, so outside issues
+# never run it on their own. The issue text is passed through a file and only parsed, never run.
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: suggestion-${{ github.event.issue.number }}
+
+jobs:
+  add:
+    if: github.event.label.name == 'accepted' && contains(github.event.issue.labels.*.name, 'suggestion')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Add the entry
+        id: add
+        env:
+          BODY: ${{ github.event.issue.body }}
+        run: |
+          printf '%s' "$BODY" > "$RUNNER_TEMP/issue.md"
+          set +e
+          python3 scripts/add_entry.py "$RUNNER_TEMP/issue.md" > "$RUNNER_TEMP/result.json"
+          echo "status=$?" >> "$GITHUB_OUTPUT"
+          echo "result=$(cat "$RUNNER_TEMP/result.json")" >> "$GITHUB_OUTPUT"
+
+      - name: Open the pull request
+        id: pr
+        if: steps.add.outputs.status == '0'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: suggestion/${{ github.event.issue.number }}
+          title: "Add ${{ fromJSON(steps.add.outputs.result).name }}"
+          commit-message: "Add ${{ fromJSON(steps.add.outputs.result).name }} (#${{ github.event.issue.number }})"
+          author: Soumyaranjan Dash <sdash@nso.edu>
+          committer: Soumyaranjan Dash <sdash@nso.edu>
+          body: |
+            Adds ${{ fromJSON(steps.add.outputs.result).name }} to **${{ fromJSON(steps.add.outputs.result).section }}**, as suggested by @${{ github.event.issue.user.login }} in #${{ github.event.issue.number }}.
+
+            ```markdown
+            ${{ fromJSON(steps.add.outputs.result).line }}
+            ```
+
+            Closes #${{ github.event.issue.number }}
+          labels: suggestion
+
+      - name: Reply on the issue
+        uses: actions/github-script@v7
+        env:
+          RESULT: ${{ steps.add.outputs.result }}
+          STATUS: ${{ steps.add.outputs.status }}
+          PR: ${{ steps.pr.outputs.pull-request-number }}
+        with:
+          script: |
+            const issue_number = context.payload.issue.number;
+            const result = JSON.parse(process.env.RESULT || '{}');
+            if (process.env.STATUS !== '0') {
+              await github.rest.issues.createComment({ ...context.repo, issue_number,
+                body: `This could not be added automatically: ${result.error || 'unknown error'}\n\nPlease edit the issue, and a maintainer will label it again.` });
+              await github.rest.issues.removeLabel({ ...context.repo, issue_number, name: 'accepted' }).catch(() => {});
+              return;
+            }
+            const maintainer = /- \[[xX]\] I maintain or help maintain this resource/.test(context.payload.issue.body || '');
+            const repo = `https://github.com/${context.repo.owner}/${context.repo.repo}`;
+            let body = `Thanks! #${process.env.PR} adds **${result.name}** to ${result.section}. This issue closes when it is merged.`;
+            if (maintainer) {
+              body += `\n\nIf you would like to show the listing in your project's README, you can use this badge:\n\n` +
+                '```markdown\n' +
+                `[![Listed in Awesome Heliophysics](https://img.shields.io/badge/listed%20in-Awesome%20Heliophysics-fc60a8?logo=awesomelists&logoColor=white)](${repo})\n` +
+                '```';
+            }
+            await github.rest.issues.createComment({ ...context.repo, issue_number, body });
