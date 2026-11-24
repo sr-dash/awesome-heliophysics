@@ -89,6 +89,10 @@
         <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
         <span>GitHub</span>
       </a>
+      <button class="share-open" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="share-pop">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.8 15.7 6.3M8.3 13.2l7.4 4.5"/></svg>
+        <span>Share</span>
+      </button>
       <button class="theme" type="button" aria-label="Switch between dark and light" title="Switch between dark and light">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></g></svg>
       </button>
@@ -153,10 +157,19 @@
           <button class="btn btn-small" type="button" data-copy="[![Listed in Awesome Heliophysics](https://img.shields.io/badge/listed%20in-Awesome%20Heliophysics-fc60a8?logo=awesomelists&amp;logoColor=white)](https://github.com/sr-dash/awesome-heliophysics)">Copy badge Markdown</button>
         </div>
       </div>
-      <p class="fine">The list is in the public domain (<a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="noopener">CC0 1.0</a>). Section colours follow the false-colour scales of SDO's AIA channels. The disc at the top is an idealised surface flux transport model: bipolar regions emerge in the activity belt with Hale's and Joy's laws, their flux spreads and is carried poleward, and the trailing flux reverses the polar field once every cycle. Also available as <a href="data/entries.json">JSON</a> and <a href="llms.txt">plain text</a>. Maintained by <a href="https://github.com/sr-dash" rel="noopener">Soumyaranjan Dash</a>. This page uses Google Analytics to count visits.</p>
+      <div>
+        <h2>Share this list</h2>
+        <p>Know someone who would use it? The link keeps your current search and filters.</p>
+        <div class="share-row" data-share-row></div>
+      </div>
+      <p class="fine">The list is in the public domain (<a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="noopener">CC0 1.0</a>). Section colours follow the false-colour scales of SDO's AIA channels. The disc at the top is an idealised surface flux transport model: bipolar regions emerge in the activity belt with Hale's and Joy's laws, their flux spreads and is carried poleward, and the trailing flux reverses the polar field once every cycle. Also available as <a href="data/entries.json">JSON</a> and <a href="llms.txt">plain text</a>. Maintained by <a href="https://github.com/sr-dash" rel="noopener">Soumyaranjan Dash</a>.</p>
     </div>
   </footer>
 
+  <div class="share-pop" id="share-pop" role="dialog" aria-label="Share this list" hidden>
+    <p class="share-title">Share this list</p>
+    <div class="share-row" data-share-row></div>
+  </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
