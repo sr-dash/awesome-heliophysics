@@ -39,6 +39,7 @@ Missing something? [Suggest a resource](https://github.com/sr-dash/awesome-helio
 - [Cluster Science Archive](https://csa.esac.esa.int/) - ESA's archive of the four-spacecraft Cluster magnetospheric mission.
 - [DARTS](https://darts.isas.jaxa.jp/) - JAXA's space science archive, including Hinode, Yohkoh, Geotail and Akebono data.
 - [DKIST Data Center](https://dkist.data.nso.edu/) - Search and download of calibrated data from the Daniel K. Inouye Solar Telescope.
+- [e-Callisto](https://www.e-callisto.org/) - Worldwide network of solar radio spectrometers, with daily spectrograms of radio bursts.
 - [ESA Heliophysics Archive](https://hpa.esa.int/hpa) - ESA's single archive for the data of its heliophysics missions.
 - [GONG data](https://gong.nso.edu/data/) - Full-disk magnetograms, H-alpha, Dopplergrams and synoptic maps from NSO's Global Oscillation Network Group.
 - [Helio.Data](https://helio.data.nasa.gov/) - NASA's discovery portal for heliophysics data, catalogues and other digital resources.
@@ -49,6 +50,7 @@ Missing something? [Suggest a resource](https://github.com/sr-dash/awesome-helio
 - [INTERMAGNET](https://intermagnet.org/) - Real-time and definitive data from ground magnetic observatories around the world.
 - [IRIS data](https://iris.lmsal.com/data.html) - Level 2 spectra and slit-jaw images from the Interface Region Imaging Spectrograph.
 - [JSOC](http://jsoc.stanford.edu/) - The Joint Science Operations Center archive of SDO HMI and AIA data.
+- [LISIRD](https://lasp.colorado.edu/lisird/) - Solar spectral and total irradiance, solar indices and long-term variability datasets.
 - [Madrigal](https://cedar.openmadrigal.org/) - Upper-atmosphere and ionosphere data from incoherent scatter radars and other ground instruments.
 - [MEDOC](https://idoc.osups.universite-paris-saclay.fr/MEDOC/) - European archive of SOHO, STEREO, Solar Orbiter and other solar data.
 - [MMS Science Data Center](https://lasp.colorado.edu/mms/sdc/public/) - Data from NASA's four-spacecraft Magnetospheric Multiscale mission.
@@ -60,6 +62,7 @@ Missing something? [Suggest a resource](https://github.com/sr-dash/awesome-helio
 - [Parker Solar Probe Science Gateway](https://psp-gateway.jhuapl.edu/) - Data, orbit information and instrument pages for Parker Solar Probe.
 - [PRADAN](https://pradan.issdc.gov.in/al1/) - ISRO's archive of Aditya-L1 data.
 - [SDAC](https://umbra.nascom.nasa.gov/) - NASA's Solar Data Analysis Center, with SOHO and other solar mission data and tools.
+- [SDO EVE](https://lasp.colorado.edu/eve/) - Solar extreme-ultraviolet spectral irradiance from SDO's Extreme ultraviolet Variability Experiment.
 - [Solar Orbiter Archive](https://soar.esac.esa.int/soar/) - ESA's archive of Solar Orbiter remote-sensing and in situ data.
 - [SSCWeb](https://sscweb.gsfc.nasa.gov/) - Spacecraft orbit locations and conjunctions in many coordinate systems, with web services.
 - [STEREO Science Center](https://stereo-ssc.nascom.nasa.gov/) - STEREO data, browse images, orbit plots and mission status.
@@ -73,10 +76,12 @@ Missing something? [Suggest a resource](https://github.com/sr-dash/awesome-helio
 
 ## Event catalogues and indices
 
+- [CACTus](https://www.sidc.be/cactus/) - Automated catalogue of coronal mass ejections detected in SOHO LASCO and STEREO coronagraph images.
 - [CDAW LASCO CME catalogue](https://cdaw.gsfc.nasa.gov/CME_list/) - Every CME seen by SOHO LASCO since 1996, with speeds, widths and movies.
 - [DONKI](https://ccmc.gsfc.nasa.gov/tools/DONKI/) - NASA's database of flares, CMEs, solar energetic particle events and geomagnetic storms.
 - [GFZ Kp index](https://kp.gfz.de/en/) - The official Kp, ap and Hpo geomagnetic indices.
 - [HELCATS](https://www.helcats-fp7.eu/) - Catalogues of coronal mass ejections and solar wind structures tracked in the STEREO heliospheric imagers.
+- [HELIO4CAST ICMECAT](https://helioforecast.space/icmecat) - Catalogue of interplanetary coronal mass ejections observed in situ by many spacecraft, with their properties.
 - [Heliophysics Event Knowledgebase](https://www.lmsal.com/hek/) - Searchable catalogue of solar features and events detected in SDO and other data.
 - [Multi-spacecraft bow shock database](https://omniweb.gsfc.nasa.gov/ftpbrowser/bowshock.html) - Crossings of Earth's bow shock by many spacecraft, with the plasma and field conditions at each.
 - [Multi-spacecraft magnetopause database](https://omniweb.gsfc.nasa.gov/ftpbrowser/magnetopause.html) - Magnetopause crossings by many spacecraft, with the upstream solar wind conditions.
@@ -86,6 +91,7 @@ Missing something? [Suggest a resource](https://github.com/sr-dash/awesome-helio
 ## Python software
 
 - [aiapy](https://github.com/LM-SAL/aiapy) - Calibration and analysis of SDO AIA data.
+- [Astropy](https://github.com/astropy/astropy) - Core astronomy package that SunPy builds on: units, coordinates, time, tables, FITS and WCS.
 - [cdflib](https://github.com/lasp/cdflib) - Read and write NASA CDF files in pure Python.
 - [ChiantiPy](https://github.com/chianti-atomic/ChiantiPy) - Python interface to the CHIANTI atomic database for optically thin emission.
 - [dkist](https://github.com/DKISTDC/dkist) - Search, transfer and work with DKIST datasets.
@@ -108,9 +114,12 @@ Missing something? [Suggest a resource](https://github.com/sr-dash/awesome-helio
 - [solarmach](https://github.com/jgieseler/solarmach) - Plot spacecraft positions and their Parker-spiral magnetic connection to the Sun.
 - [SpacePy](https://github.com/spacepy/spacepy) - Tools for space science: coordinates, time, empirical models and data handling.
 - [Speasy](https://github.com/SciQLop/speasy) - One interface to CDAWeb, AMDA, CSA and other space physics web services.
+- [SpiceyPy](https://github.com/AndrewAnnex/SpiceyPy) - Python interface to NASA's SPICE toolkit for spacecraft positions, orientations and coordinate frames.
 - [stixpy](https://github.com/TCDSolar/stixpy) - Solar Orbiter STIX data search, loading and imaging.
 - [sunkit-image](https://github.com/sunpy/sunkit-image) - Image processing for solar data: enhancement, tracking and coalignment.
+- [sunkit-instruments](https://github.com/sunpy/sunkit-instruments) - Instrument-specific tools for solar data, such as GOES XRS, RHESSI and Fermi GBM utilities.
 - [sunkit-magex](https://github.com/sunpy/sunkit-magex) - Potential-field source-surface (PFSS) extrapolation and field-line tracing.
+- [sunkit-spex](https://github.com/sunpy/sunkit-spex) - X-ray spectral fitting for solar flares, under active development.
 - [SunPy](https://github.com/sunpy/sunpy) - The core Python package for solar physics: maps, coordinates, time series and data search, including the Solar Orbiter Archive.
 - [sunraster](https://github.com/sunpy/sunraster) - Spectral and raster-scan data such as IRIS and EIS.
 - [VirES client](https://github.com/ESA-VirES/VirES-Python-Client) - Access Swarm and other geomagnetic data and models.
@@ -121,6 +130,7 @@ Missing something? [Suggest a resource](https://github.com/sr-dash/awesome-helio
 - [AMDA](https://amda.irap.omp.eu/) - Web workspace for plotting and analysing space physics time series.
 - [Autoplot](https://autoplot.org/) - Interactive browser and plotter for time-series data in CDF, HAPI and other formats.
 - [CHIANTI](https://www.chiantidatabase.org/) - Atomic database and software for the emission of astrophysical plasmas.
+- [NAIF SPICE](https://naif.jpl.nasa.gov/naif/) - NASA's toolkit and kernels for spacecraft positions, orientations and instrument geometry.
 - [SciQLop](https://github.com/SciQLop/SciQLop) - Desktop application for exploring and labelling in situ space physics data.
 - [SolarSoft](https://www.lmsal.com/solarsoft/) - The IDL library behind most solar mission pipelines and analysis software.
 - [SPEDAS](https://spedas.org/) - IDL framework for loading and analysing multi-mission space physics data.
@@ -146,14 +156,18 @@ Missing something? [Suggest a resource](https://github.com/sr-dash/awesome-helio
 - [iSWA](https://ccmc.gsfc.nasa.gov/tools/ISWA/) - CCMC's configurable dashboard of space-weather data and model output.
 - [JHelioviewer](https://www.jhelioviewer.org/) - Desktop viewer for solar images and movies from many missions, with 3D views.
 - [Scientific Visualization Studio](https://svs.gsfc.nasa.gov/) - NASA's library of scientific visualisations and animations, many of the Sun and the heliosphere.
+- [Solar-MACH](https://solar-mach.github.io/) - Web app that plots spacecraft positions and their magnetic connection to the Sun for any date.
 - [SolarMonitor](https://www.solarmonitor.org/) - Daily summary of active regions, flare probabilities and full-disk images.
 
 ## Models and simulation codes
 
 - [Athena++](https://github.com/PrincetonUniversity/athena) - Adaptive-mesh MHD code used for solar and astrophysical plasmas.
 - [CCMC](https://ccmc.gsfc.nasa.gov/) - NASA's Community Coordinated Modeling Center: runs on request of coronal, heliospheric and magnetospheric models.
+- [EUHFORIA](https://euhforia.com/) - European 3D MHD model of the inner heliosphere for solar wind and coronal mass ejection forecasting.
+- [HUXt](https://github.com/University-of-Reading-Space-Science/HUXt) - Fast reduced-physics solar wind model in Python, for heliospheric forecasts and ensembles.
 - [Lare3d](https://github.com/Warwick-Plasma/Lare3d) - Lagrangian-remap MHD code for the solar atmosphere.
 - [Lightweaver](https://github.com/Goobley/Lightweaver) - Framework for non-LTE radiative transfer.
+- [MAS](https://github.com/predsci/MAS) - Predictive Science's thermodynamic MHD model of the solar corona and heliosphere.
 - [MPI-AMRVAC](https://amrvac.org/) - Parallel adaptive-mesh code for (magneto)hydrodynamics, widely used for solar applications.
 - [POT3D](https://github.com/predsci/POT3D) - Fast potential-field solver for the solar corona.
 - [RH 1.5D](https://github.com/ITA-Solar/rh) - Massively parallel non-LTE radiative transfer for solar spectral lines.
@@ -162,6 +176,7 @@ Missing something? [Suggest a resource](https://github.com/sr-dash/awesome-helio
 ## Space-weather services
 
 - [ESA Space Weather Service Network](https://swe.ssa.esa.int/) - ESA's space-weather products and expert service centres.
+- [GOES X-ray flux](https://www.spaceweather.gov/products/goes-x-ray-flux) - Real-time solar X-ray flux from GOES, used to classify flares.
 - [Met Office space weather](https://weather.metoffice.gov.uk/specialist-forecasts/space-weather) - The UK's operational space-weather forecast.
 - [NICT space weather forecast](https://swc.nict.go.jp/en/) - Japan's space-weather forecast and alerts.
 - [NOAA SWPC](https://www.spaceweather.gov/) - The official US forecasts, alerts and real-time solar wind.
@@ -173,11 +188,14 @@ Missing something? [Suggest a resource](https://github.com/sr-dash/awesome-helio
 
 - [Aditya-L1](https://www.isro.gov.in/Aditya_L1.html) - India's solar observatory at L1.
 - [Advanced Composition Explorer](https://izw1.caltech.edu/ACE/) - Solar wind and energetic particle monitor at L1 since 1997.
+- [Arase](https://www.isas.jaxa.jp/en/missions/spacecraft/current/erg.html) - JAXA's mission to the inner magnetosphere and the radiation belts.
+- [Cluster](https://www.esa.int/about-us/directorates/science/cluster) - ESA's four-spacecraft magnetospheric mission, flown from 2000 to 2024.
 - [DKIST](https://nso.edu/telescopes/inouye-solar-telescope/) - The 4 m Daniel K. Inouye Solar Telescope on Haleakalā.
 - [GONG](https://gong.nso.edu/) - NSO's six-station network observing the full Sun around the clock.
 - [Hinode](https://hinode.nao.ac.jp/en/) - JAXA-led solar mission with optical, X-ray and EUV instruments.
 - [IMAP](https://science.nasa.gov/mission/imap/) - NASA's Interstellar Mapping and Acceleration Probe at L1.
 - [IRIS](https://iris.lmsal.com/) - NASA's Interface Region Imaging Spectrograph.
+- [MMS](https://mms.gsfc.nasa.gov/) - NASA's four-spacecraft mission studying magnetic reconnection in Earth's magnetosphere.
 - [Parker Solar Probe](https://parkersolarprobe.jhuapl.edu/) - The first spacecraft to fly through the solar corona.
 - [PROBA2](https://proba2.sidc.be/) - ESA microsatellite with the SWAP EUV imager and LYRA radiometer.
 - [PUNCH](https://punch.space.swri.edu/) - NASA mission imaging the corona as it becomes the solar wind.
@@ -185,6 +203,9 @@ Missing something? [Suggest a resource](https://github.com/sr-dash/awesome-helio
 - [Solar Dynamics Observatory](https://sdo.gsfc.nasa.gov/) - NASA's full-disk imaging and magnetic-field observatory.
 - [Solar Orbiter](https://www.cosmos.esa.int/web/solar-orbiter) - ESA and NASA's mission to image the Sun's poles and connect the corona to the solar wind.
 - [STEREO](https://science.nasa.gov/mission/stereo/) - Twin spacecraft that gave the first stereoscopic views of the Sun.
+- [Swarm](https://earth.esa.int/eogateway/missions/swarm) - ESA's satellites measuring Earth's magnetic field, ionosphere and thermosphere.
+- [Van Allen Probes](https://science.nasa.gov/mission/van-allen-probes/) - NASA's twin-spacecraft radiation belt mission, flown from 2012 to 2019.
+- [Voyager](https://science.nasa.gov/mission/voyager/) - NASA's twin spacecraft exploring the outer heliosphere and interstellar space since 1977.
 - [Wind](https://wind.nasa.gov/) - Solar wind monitor near Earth since 1994.
 
 ## Machine-learning datasets
@@ -196,11 +217,14 @@ Missing something? [Suggest a resource](https://github.com/sr-dash/awesome-helio
 ## Learning
 
 - [ADS](https://ui.adsabs.harvard.edu/) - The NASA Astrophysics Data System, the main search engine for the heliophysics and astronomy literature.
+- [DKIST Python tools tutorial](https://docs.dkist.nso.edu/projects/python-tools/en/stable/tutorial/index.html) - Step-by-step guide to searching, downloading and working with DKIST data in Python.
 - [Heliophysics Summer School](https://heliophysics.ucar.edu/summer-school) - Annual school on heliophysics as one science, with lectures online.
 - [INSPIRE](https://theinspireproject.org/) - Build a very-low-frequency receiver and record natural radio emissions from the magnetosphere.
 - [Living Reviews in Solar Physics](https://link.springer.com/journal/41116) - Open-access review articles on every area of solar physics.
 - [Perspectives on Plasmas](https://www.plasmas.org/) - Introduction to plasma science for students and the public.
+- [PyHC Documentation Hub](https://heliopython.org/pyhc-docs/) - Documentation of the Python heliophysics packages, searchable in one place.
 - [Radio JOVE](https://radiojove.gsfc.nasa.gov/) - Build a simple radio telescope and observe radio bursts from the Sun and Jupiter.
+- [SunPy example gallery](https://docs.sunpy.org/en/stable/generated/gallery/index.html) - Worked examples of solar data analysis and plotting with SunPy.
 - [SunPy tutorial](https://docs.sunpy.org/en/stable/tutorial/index.html) - Step-by-step introduction to solar data analysis in Python.
 - [UCLA Space Physics Exercises](https://spacephysics.ucla.edu/) - Introductory modules on space physics topics, with exercises.
 
@@ -212,6 +236,7 @@ Missing something? [Suggest a resource](https://github.com/sr-dash/awesome-helio
 - [Helionauts](https://helionauts.org/) - Discussion forum for the heliophysics community.
 - [IHDEA](https://ihdea.net/) - International Heliophysics Data Environment Alliance, coordinating data standards and services among agencies.
 - [ISWAT](https://www.iswat-cospar.org/) - COSPAR's International Space Weather Action Teams, organised by topic from the Sun to Earth.
+- [NASA Open Science](https://science.nasa.gov/open-science/) - NASA's policies, training and support for open data, code and publications.
 - [Python in Heliophysics Community](https://heliopython.org/) - Coordinates Python packages across heliophysics and keeps their standards.
 - [SCOSTEP PRESTO](https://scostep.org/presto/presto-science-program/) - SCOSTEP's science programme on the predictability of the variable solar-terrestrial coupling.
 - [SHINE](https://helioshine.org/) - Solar, Heliospheric and INterplanetary Environment workshop series.
