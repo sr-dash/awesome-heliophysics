@@ -4,6 +4,7 @@
 [![Links](https://github.com/sr-dash/awesome-heliophysics/actions/workflows/links.yml/badge.svg)](https://github.com/sr-dash/awesome-heliophysics/actions/workflows/links.yml)
 [![Lint](https://github.com/sr-dash/awesome-heliophysics/actions/workflows/lint.yml/badge.svg)](https://github.com/sr-dash/awesome-heliophysics/actions/workflows/lint.yml)
 [![Pages](https://github.com/sr-dash/awesome-heliophysics/actions/workflows/pages.yml/badge.svg)](https://github.com/sr-dash/awesome-heliophysics/actions/workflows/pages.yml)
+[![Status](https://sr-dash.github.io/status/badges/awesome-heliophysics.svg)](https://sr-dash.github.io/status/#awesome-heliophysics)
 [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey)](LICENSE)
 
 > A curated list of data archives, software, models, viewers and learning resources for the study of the Sun, the heliosphere and space weather.
